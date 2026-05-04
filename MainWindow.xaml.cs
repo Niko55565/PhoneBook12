@@ -1,17 +1,14 @@
 ﻿using System.Windows;
-using PhoneBook.ViewModels;
+using PhoneBook12.ViewModels;
 
-namespace PhoneBook
+namespace PhoneBook12
 {
-
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainViewModel viewModel)
         {
             InitializeComponent();
-
-            // Связываем View и ViewModel через DataContext
-            DataContext = new MainViewModel();
+            DataContext = viewModel; // Привязываем данные
         }
     }
 }
